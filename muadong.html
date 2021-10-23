@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class = "head">
+            <img style="height: 59px;" src="https://media.istockphoto.com/vectors/fotoapparat-icon-vector-illustration-isolated-pohotocamera-symbol-vector-id1147544706" alt="Branch">
+            <div class = "intro">
+                <a style="color: white; margin: auto; margin-left: 20px; text-decoration: none;" href="index.html">Trang chủ</a>
+            </div>
+        </div>
+    </header>
+    <div class = "body" style="background-color: rgba(144, 165, 204, 0.4);">
+        <div class ="left">
+            <ul style="list-style-type: none; padding-right: 40px;">
+                <li>
+                    <a href="index.html">Category "Mùa xuân"</a> 
+                </li>
+                <hr>
+                <li>
+                    <a href="muaha.html">Category "Mùa hạ"</a> 
+                </li>
+                <hr>
+                <li>
+                    <a href="muathu.html">Category "Mùa thu"</a> 
+                </li>
+                <hr>
+                <li>
+                    <a href="muadong.html">Category "Mùa đông"</a> 
+                </li>
+            </ul>
+        </div>
+        <div class = "right">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <div class="slides">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/05/hinh-nen-mua-dong-co-tuyet-trang-phu-day.jpg" alt="Mùa đông">
+            </div>
+            <div class="slides">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://kenhthoitiet.vn/wp-content/uploads/2018/11/anh-dep-tuyet-roi.jpg" alt="Mùa đông">
+            </div>
+            <div class="slides">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://anhdep123.com/wp-content/uploads/2021/01/hinh-anh-tuyet.jpg" alt="Mùa đông">
+            </div>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class = "dots" style="text-align:center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <br>
+            <br>
+            <div class="photos">
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHrJHouL_nlzzGspCwYaV_llk08LG9Q-uCag&usqp=CAU" alt="Hoa mùa đông">
+                </div>
+                <div>
+                    <img src="https://e.khoahoc.tv/photos/image/2018/12/24/bong-tuyet-650.jpg" alt="Hoa mùa đông">
+                </div>
+                <div>
+                    <img src="https://vi.wappuri.com/wp-content/uploads/2018/12/07.jpg" alt="Hoa mùa đông">
+                </div>
+                <div>
+                    <img src="https://lh3.googleusercontent.com/proxy/3wots0PW1CSUdk3dtpF1aLadgURSkRAKFK5RPIJ4yw4gPBw0aWJym4-A3M60EgysWrF5ZXJhiFNbL2o301nq5a125OhFim-a2zZgeEdK2_xIm_0eLiQv" alt="Hoa mùa đông">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("slides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+</html>

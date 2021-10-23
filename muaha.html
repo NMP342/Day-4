@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class = "head">
+            <img style="height: 59px;" src="https://media.istockphoto.com/vectors/fotoapparat-icon-vector-illustration-isolated-pohotocamera-symbol-vector-id1147544706" alt="Branch">
+            <div class = "intro">
+                <a style="color: white; margin: auto; margin-left: 20px; text-decoration: none;" href="index.html">Trang chủ</a>
+            </div>
+        </div>
+    </header>
+    <div class = "body" style="background-color: rgba(156, 207, 151, 0.4);">
+        <div class ="left">
+            <ul style="list-style-type: none; padding-right: 40px;">
+                <li>
+                    <a href="index.html">Category "Mùa xuân"</a> 
+                </li>
+                <hr>
+                <li>
+                    <a href="muaha.html">Category "Mùa hạ"</a> 
+                </li>
+                <hr>
+                <li>
+                    <a href="muathu.html">Category "Mùa thu"</a> 
+                </li>
+                <hr>
+                <li>
+                    <a href="muadong.html">Category "Mùa đông"</a> 
+                </li>
+            </ul>
+        </div>
+        <div class = "right">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <div class="slides">
+                <div class="numbertext">1 / 3</div>
+                <img src="https://img.thuthuatphanmem.vn/uploads/2018/11/06/anh-dep-canh-dong-hoa-mua-he_044759438.jpg" alt="Mùa hạ">
+            </div>
+            <div class="slides">
+                <div class="numbertext">2 / 3</div>
+                <img src="https://pdp.edu.vn/wp-content/uploads/2021/05/hinh-anh-mua-he-dep-1.jpg" alt="Mùa hạ">
+            </div>
+            <div class="slides">
+                <div class="numbertext">3 / 3</div>
+                <img src="https://i.pinimg.com/originals/83/66/c8/8366c8b6781b05a61ea4f543757e0732.jpg" alt="Mùa hạ">
+            </div>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class = "dots" style="text-align:center;">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            <br>
+            <br>
+            <div class="photos">
+                <div>
+                    <img src="https://yt.cdnxbvn.com/medias/uploads/46/46762-hoa-mua-he-10.jpg" alt="Hoa mùa hạ">
+                </div>
+                <div>
+                    <img src="https://imgs.vietnamnet.vn/Images/2017/04/07/16/20170407162929-loai-hoa-12.jpg" alt="Hoa mùa hạ">
+                </div>
+                <div>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCKi06aSqEVVvGdZlLtYFC3xaYC6KeDdZLbw&usqp=CAU" alt="Hoa mùa hạ">
+                </div>
+                <div>
+                    <img src="https://nhandan.vn/Files/Images/2020/06/13/1592038883000_3_4505.jpg" alt="Hoa mùa hạ">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("slides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+</body>
+</html>
